@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Klassik ko'ylak",
+    "desc": "Sifatli paxta, oq rang, ofis uslubi",
+    "price": 120000,
+    "cat": "koylak",
+    "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Koylak"
+  },
+  {
+    "id": 2,
+    "name": "Slim fit shim",
+    "desc": "Zamonaviy kesim, qora rang",
+    "price": 180000,
+    "cat": "shim",
+    "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Shim"
+  }
+]
