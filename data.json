@@ -17,5 +17,11 @@
       "desc": "Real Madrid futbolkasi, oq rangda"
     }
   ],
-  "reviews": []
+  "reviews": [
+    {
+      "name": "Shuxrat Kalbaev",
+      "rating": 5,
+      "text": "Gggg"
+    }
+  ]
 }
