@@ -1,4 +1,13 @@
 {
-  "products": [],
+  "products": [
+    {
+      "id": 1,
+      "name": "Real Madrid oq futbolkasi",
+      "price": 2000.0,
+      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
+      "cat": "sport",
+      "desc": "Oq rangli Real Madrid futbolkasi"
+    }
+  ],
   "reviews": []
 }
