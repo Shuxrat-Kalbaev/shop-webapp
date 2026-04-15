@@ -7,6 +7,14 @@
       "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
       "cat": "sport",
       "desc": "Oq rangli Real Madrid futbolkasi"
+    },
+    {
+      "id": 2,
+      "name": "Real Madrid oq futbolkasi",
+      "price": 1200.0,
+      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
+      "cat": "sport",
+      "desc": "Real Madrid oq futbolkasi"
     }
   ],
   "reviews": []
