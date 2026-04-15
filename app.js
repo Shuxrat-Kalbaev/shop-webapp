@@ -1,24 +1,32 @@
-const tg = window.Telegram?.WebApp || { 
-  expand: ()=>{}, 
+
+const tg = window.Telegram?.WebApp || {
+  expand: ()=>{},
   sendData: (d)=>{ console.log('sendData:', d); },
   showAlert: (m)=>{ alert(m); },
   HapticFeedback: null
 };
 tg.expand();
 
-// Sahifa yuklanganda darhol ishga tushirish
-(function init() {
-  products = DEMO;
-  renderProducts(products);
-})();
-
-// ── STATE ───────────────────────────────────────────
 let products  = [];
 let cart      = {};
 let favorites = {};
 let currentCat = 'all';
 let prevPage   = 'home';
 
+const PRODUCTS_URL = 'https://shuxrat-kalbaev.github.io/shop-webapp/products.json';
+const FREE_DELIVERY_THRESHOLD = 500000;
+
+// Mahsulotlarni yuklash
+fetch(PRODUCTS_URL)
+  .then(r => r.json())
+  .then(data => {
+    products = data;
+    renderProducts(products);
+  })
+  .catch(() => {
+    document.getElementById('products-grid').innerHTML =
+      "<p class='empty-msg'>❌ Mahsulotlar yuklanmadi. Qayta urinib ko'ring.</p>";
+  });
 // ── DEMO MAHSULOTLAR (keyinroq backenddan olasiz) ──
 const DEMO = [
   { id:1, name:"Klassik ko'ylak", desc:"Sifatli paxta, oq rang, ofis uslubi", price:120000, cat:"koylak", image:"https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Koylak" },
