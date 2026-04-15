@@ -1,15 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-  products = DEMO;
-  renderProducts(products);
-});
-
-const tg = window.Telegram.WebApp;
+const tg = window.Telegram?.WebApp || { 
+  expand: ()=>{}, 
+  sendData: (d)=>{ console.log('sendData:', d); },
+  showAlert: (m)=>{ alert(m); },
+  HapticFeedback: null
+};
 tg.expand();
 
-function initApp() {
+// Sahifa yuklanganda darhol ishga tushirish
+(function init() {
   products = DEMO;
   renderProducts(products);
-}
+})();
 
 // ── STATE ───────────────────────────────────────────
 let products  = [];
