@@ -1,5 +1,15 @@
+document.addEventListener('DOMContentLoaded', function() {
+  products = DEMO;
+  renderProducts(products);
+});
+
 const tg = window.Telegram.WebApp;
 tg.expand();
+
+function initApp() {
+  products = DEMO;
+  renderProducts(products);
+}
 
 // ── STATE ───────────────────────────────────────────
 let products  = [];
