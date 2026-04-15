@@ -2,31 +2,12 @@
   "products": [
     {
       "id": 1,
-      "name": "Italyancha shim",
-      "price": 2000.0,
-      "image": "C:\\Temp\\products\\AgACAgIAAxkBAAMzad9vTvHxHgWR_LuZWVFqNOogW9IAAjAVaxuEb_hKq4meZwJYk78BAAMCAAN4AAM7BA.jpg",
-      "cat": "shim",
-      "desc": "Ko'k rangli italyancha shim"
-    },
-    {
-      "id": 2,
       "name": "Real Madrid futbolkasi",
-      "price": 3000.0,
-      "image": "C:\\Temp\\products\\AgACAgIAAxkBAANPad9v-3Gb8XlSftliHpoVDU-LaPgAAjQVaxuEb_hKB_DKNcbohlsBAAMCAAN4AAM7BA.jpg",
+      "price": 2000.0,
+      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
       "cat": "sport",
-      "desc": "Real Madrid futbolkasi, oq rangda"
+      "desc": "Oq rangli Real Madrid futbolkasi"
     }
   ],
-  "reviews": [
-    {
-      "name": "Shuxrat Kalbaev",
-      "rating": 5,
-      "text": "Aagagg"
-    },
-    {
-      "name": "Shuxrat Kalbaev",
-      "rating": 5,
-      "text": "Gggg"
-    }
-  ]
+  "reviews": []
 }
