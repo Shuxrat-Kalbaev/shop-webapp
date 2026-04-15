@@ -1,4 +1,13 @@
 {
-  "products": [],
+  "products": [
+    {
+      "id": 1,
+      "name": "Italyancha shim",
+      "price": 2000.0,
+      "image": "C:\\Temp\\products\\AgACAgIAAxkBAAMzad9vTvHxHgWR_LuZWVFqNOogW9IAAjAVaxuEb_hKq4meZwJYk78BAAMCAAN4AAM7BA.jpg",
+      "cat": "shim",
+      "desc": "Ko'k rangli italyancha shim"
+    }
+  ],
   "reviews": []
 }
