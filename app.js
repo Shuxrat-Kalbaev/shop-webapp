@@ -26,6 +26,14 @@ window.addEventListener('load', () => {
   renderProducts(products);
 });
 
+// Telegram WebApp uchun qo'shimcha
+document.addEventListener('DOMContentLoaded', () => {
+  if (!products.length) {
+    products = DEMO;
+    renderProducts(products);
+  }
+});
+
 // ── SAHIFA ALMASHTIRISH ─────────────────────────────
 function showPage(name) {
   prevPage = document.querySelector('.page:not(.hidden)')?.id?.replace('page-','') || 'home';
