@@ -7,6 +7,14 @@
       "image": "C:\\Temp\\products\\AgACAgIAAxkBAAMzad9vTvHxHgWR_LuZWVFqNOogW9IAAjAVaxuEb_hKq4meZwJYk78BAAMCAAN4AAM7BA.jpg",
       "cat": "shim",
       "desc": "Ko'k rangli italyancha shim"
+    },
+    {
+      "id": 2,
+      "name": "Real Madrid futbolkasi",
+      "price": 3000.0,
+      "image": "C:\\Temp\\products\\AgACAgIAAxkBAANPad9v-3Gb8XlSftliHpoVDU-LaPgAAjQVaxuEb_hKB_DKNcbohlsBAAMCAAN4AAM7BA.jpg",
+      "cat": "sport",
+      "desc": "Real Madrid futbolkasi, oq rangda"
     }
   ],
   "reviews": []
