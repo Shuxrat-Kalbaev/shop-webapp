@@ -1,21 +1,4 @@
 {
-  "products": [
-    {
-      "id": 2,
-      "name": "Italyancha shim",
-      "price": 2500.0,
-      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
-      "cat": "shim",
-      "desc": "Oq rangli Italyancha shim"
-    },
-    {
-      "id": 3,
-      "name": "Italyancha shim",
-      "price": 2600.0,
-      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
-      "cat": "shim",
-      "desc": "Oq rangli Italyancha shim"
-    }
-  ],
+  "products": [],
   "reviews": []
 }
