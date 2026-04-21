@@ -4,7 +4,7 @@
       "id": 2,
       "name": "Italyancha shim",
       "price": 2500.0,
-      "image": "",
+      "image": "https://i.ibb.co/vCpPDLtS/b1f06c86ff29.jpg",
       "cat": "shim",
       "desc": "Oq rangli Italyancha shim"
     },
@@ -12,7 +12,7 @@
       "id": 3,
       "name": "Italyancha shim",
       "price": 2600.0,
-      "image": "",
+      "image": "https://i.ibb.co/JFk3Lp4H/431bb00a06db.jpg",
       "cat": "shim",
       "desc": "Oq rangli Italyancha shim"
     },
@@ -20,7 +20,7 @@
       "id": 4,
       "name": "Real Madrid oq futbolkasi",
       "price": 1000.0,
-      "image": "",
+      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg",
       "cat": "sport",
       "desc": "Oq rangli Real Madrid futbolkasi"
     },
@@ -28,7 +28,7 @@
       "id": 5,
       "name": "Real Madrid oq futbolkasi",
       "price": 1100.0,
-      "image": "",
+      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg",
       "cat": "sport",
       "desc": "Real Madrid oq futbolkasi"
     },
@@ -36,7 +36,15 @@
       "id": 6,
       "name": "Real Madrid oq futbolkasi",
       "price": 3000.0,
-      "image": "",
+      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg",
+      "cat": "sport",
+      "desc": "Real Madrid oq futbolkasi"
+    },
+    {
+      "id": 7,
+      "name": "Real Madrid oq futbolkasi",
+      "price": 3100.0,
+      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg",
       "cat": "sport",
       "desc": "Real Madrid oq futbolkasi"
     }
