@@ -160,17 +160,15 @@ function renderCart() {
   const items     = Object.values(cart);
   const container = document.getElementById('cart-items');
   const footer    = document.getElementById('cart-footer');
-  
 
   if (!items.length) {
     container.innerHTML = "<p class='empty-msg' style='padding:40px'>Savat bosh</p>";
     footer.style.display = 'none';
-    freeMsg.classList.add('hidden');
     return;
   }
 
   footer.style.display = 'block';
-  container.innerHTML = items.map(i => `
+  container.innerHTML = items.map(i => 
     <div class="cart-item">
       <img src="${i.image}" alt="${i.name}" onerror="this.src='https://via.placeholder.com/80x80/1a1a2e/c9a84c?text=?'"/>
       <div class="cart-item-info">
@@ -184,11 +182,10 @@ function renderCart() {
         </div>
       </div>
     </div>
-  `).join('');
+  ).join('');
 
-  const total     = items.reduce((s, i) => s + i.price * i.qty, 0);
+  const total = items.reduce((s, i) => s + i.price * i.qty, 0);
   document.getElementById('total-price').textContent = total.toLocaleString();
-  freeMsg.classList.add('hidden');
 }
 
 function changeQty(id, delta) {
