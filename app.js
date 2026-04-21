@@ -6,16 +6,14 @@ const tg = window.Telegram?.WebApp || {
 };
 tg.expand();
 
-// ── STATE ───────────────────────────────────────────────
 let products   = [];
 let cart       = {};
 let favorites  = {};
 let currentCat = 'all';
 let prevPage   = 'home';
 
-const DATA_URL             = 'https://shuxrat-kalbaev.github.io/shop-webapp/data.json';
+const DATA_URL = 'https://shuxrat-kalbaev.github.io/shop-webapp/data.json';
 
-// ── MA'LUMOTLARNI YUKLASH ───────────────────────────────
 function loadData() {
   fetch(DATA_URL + '?t=' + Date.now())
     .then(r => r.json())
@@ -26,11 +24,10 @@ function loadData() {
     })
     .catch(() => {
       document.getElementById('products-grid').innerHTML =
-        "<p class='empty-msg'>Mahsulotlar yuklanmadi. Qayta urinib koring.</p>";
+        "<p class='empty-msg'>Mahsulotlar yuklanmadi.</p>";
     });
 }
 
-// ── SAHIFA ALMASHTIRISH ─────────────────────────────────
 function showPage(name) {
   prevPage = document.querySelector('.page:not(.hidden)')?.id?.replace('page-', '') || 'home';
   document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
@@ -43,13 +40,11 @@ function goBack() {
   showPage(prevPage);
 }
 
-// ── SIDEBAR ─────────────────────────────────────────────
 function toggleSidebar() {
   document.getElementById('sidebar').classList.toggle('hidden');
   document.getElementById('overlay').classList.toggle('hidden');
 }
 
-// ── KATEGORIYA ──────────────────────────────────────────
 function filterCat(cat, btn) {
   currentCat = cat;
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
@@ -61,7 +56,6 @@ function filterCat(cat, btn) {
   showPage('home');
 }
 
-// ── QIDIRUV ─────────────────────────────────────────────
 function searchProducts() {
   const query = document.getElementById('search-input').value.toLowerCase();
   applyFilter(currentCat, query);
@@ -70,13 +64,12 @@ function searchProducts() {
 function applyFilter(cat, query) {
   let filtered = products;
   if (cat !== 'all') filtered = filtered.filter(p => p.cat === cat);
-  if (query)         filtered = filtered.filter(p =>
+  if (query) filtered = filtered.filter(p =>
     p.name.toLowerCase().includes(query) || (p.desc || '').toLowerCase().includes(query)
   );
   renderProducts(filtered);
 }
 
-// ── MAHSULOTLARNI CHIQARISH ─────────────────────────────
 function renderProducts(list) {
   const grid = document.getElementById('products-grid');
   if (!list || !list.length) {
@@ -86,7 +79,7 @@ function renderProducts(list) {
   grid.innerHTML = list.map(p => `
     <div class="card" onclick="showDetail(${p.id})">
       <div class="card-img-wrap">
-        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm+yoq'"/>
+        <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm'"/>
         <button class="fav-btn" onclick="event.stopPropagation(); toggleFav(${p.id})">
           ${favorites[p.id] ? '❤️' : '🤍'}
         </button>
@@ -103,9 +96,9 @@ function renderProducts(list) {
   `).join('');
 }
 
-// ── SHARHLARNI CHIQARISH ────────────────────────────────
 function renderReviews(reviews) {
   const container = document.getElementById('reviews-container');
+  if (!container) return;
   if (!reviews || !reviews.length) {
     container.innerHTML = "<p style='color:#aaa;font-size:.85rem;padding:10px'>Hali sharhlar yoq</p>";
     return;
@@ -119,7 +112,6 @@ function renderReviews(reviews) {
   `).join('');
 }
 
-// ── DETAIL SAHIFA ───────────────────────────────────────
 function showDetail(id) {
   const p = products.find(x => x.id === id);
   if (!p) return;
@@ -128,7 +120,7 @@ function showDetail(id) {
   document.getElementById('page-detail').classList.remove('hidden');
   document.getElementById('detail-title').textContent = p.name;
   document.getElementById('detail-content').innerHTML = `
-    <img class="detail-img" src="${p.image}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm+yoq'"/>
+    <img class="detail-img" src="${p.image}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm'"/>
     <div class="detail-body">
       <div class="detail-name">${p.name}</div>
       <div class="detail-cat">Kategoriya: ${p.cat || ''}</div>
@@ -141,7 +133,6 @@ function showDetail(id) {
   `;
 }
 
-// ── SAVAT ───────────────────────────────────────────────
 function addToCart(id) {
   const p = products.find(x => x.id === id);
   if (!p) return;
@@ -168,7 +159,7 @@ function renderCart() {
   }
 
   footer.style.display = 'block';
-  container.innerHTML = items.map(i => 
+  container.innerHTML = items.map(i => `
     <div class="cart-item">
       <img src="${i.image}" alt="${i.name}" onerror="this.src='https://via.placeholder.com/80x80/1a1a2e/c9a84c?text=?'"/>
       <div class="cart-item-info">
@@ -182,7 +173,7 @@ function renderCart() {
         </div>
       </div>
     </div>
-  ).join('');
+  `).join('');
 
   const total = items.reduce((s, i) => s + i.price * i.qty, 0);
   document.getElementById('total-price').textContent = total.toLocaleString();
@@ -202,7 +193,6 @@ function removeFromCart(id) {
   renderCart();
 }
 
-// ── SEVIMLILAR ──────────────────────────────────────────
 function toggleFav(id) {
   if (favorites[id]) delete favorites[id];
   else favorites[id] = products.find(x => x.id === id);
@@ -232,7 +222,6 @@ function renderFavorites() {
   `).join('');
 }
 
-// ── BUYURTMA BERISH ─────────────────────────────────────
 function placeOrder() {
   const items = Object.values(cart);
   if (!items.length) {
@@ -249,5 +238,4 @@ function placeOrder() {
   updateCartBadge();
 }
 
-// ── ISHGA TUSHIRISH ─────────────────────────────────────
 loadData();
