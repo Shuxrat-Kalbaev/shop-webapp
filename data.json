@@ -4,7 +4,7 @@
       "id": 2,
       "name": "Italyancha shim",
       "price": 2500.0,
-      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
+      "image": "",
       "cat": "shim",
       "desc": "Oq rangli Italyancha shim"
     },
@@ -12,7 +12,7 @@
       "id": 3,
       "name": "Italyancha shim",
       "price": 2600.0,
-      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
+      "image": "",
       "cat": "shim",
       "desc": "Oq rangli Italyancha shim"
     },
@@ -20,7 +20,7 @@
       "id": 4,
       "name": "Real Madrid oq futbolkasi",
       "price": 1000.0,
-      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
+      "image": "",
       "cat": "sport",
       "desc": "Oq rangli Real Madrid futbolkasi"
     },
@@ -28,7 +28,15 @@
       "id": 5,
       "name": "Real Madrid oq futbolkasi",
       "price": 1100.0,
-      "image": "https://via.placeholder.com/300x300/1a1a2e/c9a84c?text=Rasm",
+      "image": "",
+      "cat": "sport",
+      "desc": "Real Madrid oq futbolkasi"
+    },
+    {
+      "id": 6,
+      "name": "Real Madrid oq futbolkasi",
+      "price": 3000.0,
+      "image": "",
       "cat": "sport",
       "desc": "Real Madrid oq futbolkasi"
     }
