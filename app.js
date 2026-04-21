@@ -14,7 +14,6 @@ let currentCat = 'all';
 let prevPage   = 'home';
 
 const DATA_URL             = 'https://shuxrat-kalbaev.github.io/shop-webapp/data.json';
-const FREE_DELIVERY_LIMIT  = 500000;
 
 // ── MA'LUMOTLARNI YUKLASH ───────────────────────────────
 function loadData() {
@@ -192,19 +191,8 @@ function renderCart() {
 
   document.getElementById('total-price').textContent = total.toLocaleString();
 
-  if (remaining > 0) {
-    freeMsg.classList.remove('hidden');
-    freeMsg.style.background   = '#fff8e1';
-    freeMsg.style.borderColor  = '#c9a84c';
-    freeMsg.style.color        = '#7a6000';
-    freeMsg.textContent = `Bepul yetkazib berish uchun yana ${remaining.toLocaleString()} so'm xarid qiling!`;
-  } else {
-    freeMsg.classList.remove('hidden');
-    freeMsg.style.background   = '#e8f5e9';
-    freeMsg.style.borderColor  = '#27ae60';
-    freeMsg.style.color        = '#1a6b2a';
-    freeMsg.textContent = 'Bepul yetkazib berish!';
-  }
+  
+    freeMsg.classList.add('hidden');
 }
 
 function changeQty(id, delta) {
