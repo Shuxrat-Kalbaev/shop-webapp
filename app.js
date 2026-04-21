@@ -160,7 +160,7 @@ function renderCart() {
   const items     = Object.values(cart);
   const container = document.getElementById('cart-items');
   const footer    = document.getElementById('cart-footer');
-  const freeMsg   = document.getElementById('free-delivery-msg');
+  
 
   if (!items.length) {
     container.innerHTML = "<p class='empty-msg' style='padding:40px'>Savat bosh</p>";
@@ -187,12 +187,8 @@ function renderCart() {
   `).join('');
 
   const total     = items.reduce((s, i) => s + i.price * i.qty, 0);
-  const remaining = FREE_DELIVERY_LIMIT - total;
-
   document.getElementById('total-price').textContent = total.toLocaleString();
-
-  
-    freeMsg.classList.add('hidden');
+  freeMsg.classList.add('hidden');
 }
 
 function changeQty(id, delta) {
