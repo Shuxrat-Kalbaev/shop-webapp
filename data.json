@@ -15,6 +15,14 @@
       "cat": "kurtka",
       "desc": "Oq rangli yengil kurtka",
       "image": "https://i.ibb.co/HDY9ZZrW/1e40761342be.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Oq rangli Italyancha shim",
+      "price": 2000.0,
+      "cat": "shim",
+      "desc": "Oq rangli Italyancha shim",
+      "image": "https://i.ibb.co/fVjx9KNJ/a76f4008177c.jpg"
     }
   ],
   "reviews": []
