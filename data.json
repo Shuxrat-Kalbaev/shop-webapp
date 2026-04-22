@@ -55,6 +55,14 @@
       "cat": "sport",
       "desc": "Real Madrid oq futbolkasi",
       "image": "https://i.ibb.co/TBwMsdT4/3d5028851c62.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Barcelona futbolkasi",
+      "price": 2000.0,
+      "cat": "sport",
+      "desc": "Barcelona futbolkasi",
+      "image": "https://i.ibb.co/ksfz3vMT/7dbd8790973f.jpg"
     }
   ],
   "reviews": []
