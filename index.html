@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopMan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <div class="header-info">
+      <div class="logo">SM</div>
+      <div>
+        <div class="shop-name">ShopMan</div>
+        <div class="shop-slogan">Erkaklar uslubi markazi</div>
+      </div>
+    </div>
+    <button class="cart-btn" onclick="showPage('cart')">
+      🛒 <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="sidebar hidden">
+    <div class="sidebar-header">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">SM</div>
+        <div>
+          <div class="sidebar-name">ShopMan</div>
+          <div class="sidebar-sub">Erkaklar do'koni</div>
+        </div>
+      </div>
+      <button onclick="toggleSidebar()">✕</button>
+    </div>
+    <div class="sidebar-menu">
+      <a onclick="showPage('home'); toggleSidebar()">🏠 Bosh sahifa</a>
+      <a onclick="showPage('favorites'); toggleSidebar()">🤍 Sevimlilar</a>
+      <a onclick="showPage('cart'); toggleSidebar()">🛒 Savat</a>
+      <a onclick="showPage('about'); toggleSidebar()">📖 Do'kon haqida</a>
+    </div>
+    <div class="sidebar-cats">
+      <div class="sidebar-cats-title">KATEGORIYALAR</div>
+      <a onclick="filterCat('all'); toggleSidebar()" class="cat-link active" data-cat="all">≡ Hammasi</a>
+      <a onclick="filterCat('kurtka'); toggleSidebar()" class="cat-link" data-cat="kurtka">≡ Kurtkalar</a>
+      <a onclick="filterCat('koylak'); toggleSidebar()" class="cat-link" data-cat="koylak">≡ Ko'ylaklar</a>
+      <a onclick="filterCat('shim'); toggleSidebar()" class="cat-link" data-cat="shim">≡ Shimlar</a>
+      <a onclick="filterCat('sport'); toggleSidebar()" class="cat-link" data-cat="sport">≡ Sport kiyim</a>
+      <a onclick="filterCat('aksessuar'); toggleSidebar()" class="cat-link" data-cat="aksessuar">≡ Aksessuarlar</a>
+    </div>
+  </div>
+  <div id="overlay" class="overlay hidden" onclick="toggleSidebar()"></div>
+
+  <!-- BOSH SAHIFA -->
+  <div id="page-home" class="page">
+    <div class="reviews-section">
+      <div class="section-title">⭐️ Mijozlar fikrlari</div>
+      <div class="reviews-scroll" id="reviews-container">
+        <div class="review-card">
+          <div class="review-name">Jasur</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Sifat juda yaxshi!"</div>
+        </div>
+        <div class="review-card">
+          <div class="review-name">Bobur</div>
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">"Tez yetkazildi"</div>
+        </div>
+      </div>
+    </div>
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Qidirish..." oninput="searchProducts()"/>
+    </div>
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="filterCat('all', this)">Hammasi</button>
+      <button class="cat-tab" onclick="filterCat('kurtka', this)">Kurtkalar</button>
+      <button class="cat-tab" onclick="filterCat('koylak', this)">Ko'ylaklar</button>
+      <button class="cat-tab" onclick="filterCat('shim', this)">Shimlar</button>
+      <button class="cat-tab" onclick="filterCat('sport', this)">Sport</button>
+      <button class="cat-tab" onclick="filterCat('aksessuar', this)">Aksessuar</button>
+    </div>
+    <div id="products-grid" class="grid">
+      <p class="loading">⏳ Yuklanmoqda...</p>
+    </div>
+  </div>
+
+  <!-- SEVIMLILAR -->
+  <div id="page-favorites" class="page hidden">
+    <div class="page-header">
+      <button onclick="showPage('home')">←</button>
+      <h2>🤍 Sevimlilar</h2>
+    </div>
+    <div id="favorites-grid" class="grid"></div>
+  </div>
+
+  <!-- SAVAT -->
+  <div id="page-cart" class="page hidden">
+    <div class="page-header">
+      <button onclick="showPage('home')">←</button>
+      <h2>🛒 Savat</h2>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="address-box">
+        <label class="address-label">📍 Yetkazib berish manzili:</label>
+        <input type="text" id="address-input" placeholder="Shahar, ko'cha, uy raqami..."/>
+      </div>
+      <div class="cart-total">
+        JAMI: <span id="total-price">0</span> so'm
+      </div>
+      <button class="btn-order" onclick="placeOrder()">🎁 BUYURTMA BERISH</button>
+    </div>
+  </div>
+
+  <!-- DO'KON HAQIDA -->
+  <div id="page-about" class="page hidden">
+    <div class="page-header">
+      <button onclick="showPage('home')">←</button>
+      <h2>📖 Do'kon haqida</h2>
+    </div>
+    <div class="about-card">
+      <div class="about-logo">SM</div>
+      <h2>ShopMan</h2>
+      <p>Erkaklar uslubi markazi</p>
+      <div class="about-info">
+        <div class="about-row">📞 <span>+998 XX XXX XX XX</span></div>
+        <div class="about-row">📍 <span>Toshkent shahar</span></div>
+        <div class="about-row">🕐 <span>9:00 - 21:00</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAHSULOT DETAIL -->
+  <div id="page-detail" class="page hidden">
+    <div class="page-header">
+      <button onclick="goBack()">←</button>
+      <h2 id="detail-title">Mahsulot</h2>
+    </div>
+    <div id="detail-content"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
