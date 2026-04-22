@@ -394,3 +394,66 @@ body {
 
 .loading { text-align: center; padding: 40px; color: #888; grid-column: span 2; }
 .empty-msg { text-align: center; padding: 40px; color: #aaa; grid-column: span 2; }
+
+.address-box {
+  padding: 12px 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+.address-label {
+  display: block;
+  font-size: .85rem;
+  color: #666;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.address-box input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: .95rem;
+  outline: none;
+}
+.address-box input:focus {
+  border-color: #1a1a2e;
+}
+.size-section {
+  margin: 14px 0;
+}
+.size-title {
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a2e;
+}
+.size-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.size-btn {
+  padding: 8px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.size-btn.selected {
+  background: #1a1a2e;
+  color: #c9a84c;
+  border-color: #1a1a2e;
+}
+.size-error {
+  color: red;
+  font-size: .82rem;
+  margin-top: 6px;
+}
+.cart-item-size {
+  font-size: .8rem;
+  color: #666;
+  margin-bottom: 2px;
+}
