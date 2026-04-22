@@ -47,6 +47,14 @@
       "cat": "koylak",
       "desc": "Koylak",
       "image": "https://i.ibb.co/X9cHzns/abc5830caf22.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Real Madrid oq futbolkasi",
+      "price": 2000.0,
+      "cat": "sport",
+      "desc": "Real Madrid oq futbolkasi",
+      "image": "https://i.ibb.co/TBwMsdT4/3d5028851c62.jpg"
     }
   ],
   "reviews": []
