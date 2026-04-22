@@ -31,6 +31,14 @@
       "cat": "shim",
       "desc": "Qora rangli Italyancha shim",
       "image": "https://i.ibb.co/p6DHT2BK/0769ea7a76bc.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Ko'ylak",
+      "price": 2000.0,
+      "cat": "koylak",
+      "desc": "Ko'ylak",
+      "image": "https://i.ibb.co/cdZzxC6/64add86c1ff7.jpg"
     }
   ],
   "reviews": []
