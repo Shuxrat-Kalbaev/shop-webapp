@@ -7,6 +7,14 @@
       "cat": "kurtka",
       "desc": "Qora yengil kurtka",
       "image": "https://i.ibb.co/GvQc6mwW/b791f2b15276.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Oq kurtka",
+      "price": 2200.0,
+      "cat": "kurtka",
+      "desc": "Oq rangli yengil kurtka",
+      "image": "https://i.ibb.co/HDY9ZZrW/1e40761342be.jpg"
     }
   ],
   "reviews": []
