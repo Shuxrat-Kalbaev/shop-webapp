@@ -47,6 +47,14 @@
       "cat": "sport",
       "desc": "Real Madrid oq futbolkasi",
       "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Lofer",
+      "price": 1500.0,
+      "cat": "aksessuar",
+      "desc": "Qora lofer",
+      "image": "https://i.ibb.co/Pv8SWNSw/aa0320a7b295.jpg"
     }
   ],
   "reviews": [
