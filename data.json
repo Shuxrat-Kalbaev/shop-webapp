@@ -1,72 +1,13 @@
 {
   "products": [
     {
-      "id": 2,
-      "name": "Italyancha shim",
-      "price": 2500.0,
-      "cat": "shim",
-      "desc": "Oq rangli Italyancha shim",
-      "image": "https://i.ibb.co/vCpPDLtS/b1f06c86ff29.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Italyancha shim",
-      "price": 2600.0,
-      "cat": "shim",
-      "desc": "Oq rangli Italyancha shim",
-      "image": "https://i.ibb.co/JFk3Lp4H/431bb00a06db.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Real Madrid oq futbolkasi",
-      "price": 1000.0,
-      "cat": "sport",
-      "desc": "Oq rangli Real Madrid futbolkasi",
-      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Real Madrid oq futbolkasi",
-      "price": 1100.0,
-      "cat": "sport",
-      "desc": "Real Madrid oq futbolkasi",
-      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Real Madrid oq futbolkasi",
-      "price": 3000.0,
-      "cat": "sport",
-      "desc": "Real Madrid oq futbolkasi",
-      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Real Madrid oq futbolkasi",
-      "price": 3100.0,
-      "cat": "sport",
-      "desc": "Real Madrid oq futbolkasi",
-      "image": "https://i.ibb.co/Z6zJkTK2/b851adcedc36.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Lofer",
-      "price": 1500.0,
-      "cat": "aksessuar",
-      "desc": "Qora lofer",
-      "image": "https://i.ibb.co/Pv8SWNSw/aa0320a7b295.jpg"
+      "id": 1,
+      "name": "Qora kurtka",
+      "price": 2000.0,
+      "cat": "kurtka",
+      "desc": "Qora yengil kurtka",
+      "image": "https://i.ibb.co/GvQc6mwW/b791f2b15276.jpg"
     }
   ],
-  "reviews": [
-    {
-      "name": "Shuxrat Kalbaev",
-      "rating": 5,
-      "text": "Bbbb"
-    },
-    {
-      "name": "Shuxrat Kalbaev",
-      "rating": 5,
-      "text": "AAaaaaaaa"
-    }
-  ]
+  "reviews": []
 }
