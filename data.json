@@ -39,6 +39,14 @@
       "cat": "koylak",
       "desc": "Ko'ylak",
       "image": "https://i.ibb.co/cdZzxC6/64add86c1ff7.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Ko'ylak",
+      "price": 2000.0,
+      "cat": "koylak",
+      "desc": "Koylak",
+      "image": "https://i.ibb.co/X9cHzns/abc5830caf22.jpg"
     }
   ],
   "reviews": []
