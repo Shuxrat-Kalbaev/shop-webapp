@@ -1,69 +1,10 @@
 {
-  "products": [
+  "products": [],
+  "reviews": [
     {
-      "id": 1,
-      "name": "Qora kurtka",
-      "price": 2000.0,
-      "cat": "kurtka",
-      "desc": "Qora yengil kurtka",
-      "image": "https://i.ibb.co/GvQc6mwW/b791f2b15276.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Oq kurtka",
-      "price": 2200.0,
-      "cat": "kurtka",
-      "desc": "Oq rangli yengil kurtka",
-      "image": "https://i.ibb.co/HDY9ZZrW/1e40761342be.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Oq rangli Italyancha shim",
-      "price": 2000.0,
-      "cat": "shim",
-      "desc": "Oq rangli Italyancha shim",
-      "image": "https://i.ibb.co/fVjx9KNJ/a76f4008177c.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Qora rangli Italyancha shim",
-      "price": 2000.0,
-      "cat": "shim",
-      "desc": "Qora rangli Italyancha shim",
-      "image": "https://i.ibb.co/p6DHT2BK/0769ea7a76bc.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Ko'ylak",
-      "price": 2000.0,
-      "cat": "koylak",
-      "desc": "Ko'ylak",
-      "image": "https://i.ibb.co/cdZzxC6/64add86c1ff7.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Ko'ylak",
-      "price": 2000.0,
-      "cat": "koylak",
-      "desc": "Koylak",
-      "image": "https://i.ibb.co/X9cHzns/abc5830caf22.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Real Madrid oq futbolkasi",
-      "price": 2000.0,
-      "cat": "sport",
-      "desc": "Real Madrid oq futbolkasi",
-      "image": "https://i.ibb.co/TBwMsdT4/3d5028851c62.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Barcelona futbolkasi",
-      "price": 2000.0,
-      "cat": "sport",
-      "desc": "Barcelona futbolkasi",
-      "image": "https://i.ibb.co/ksfz3vMT/7dbd8790973f.jpg"
+      "name": "Shahriyor Norimmatov",
+      "rating": 5,
+      "text": ",,,"
     }
-  ],
-  "reviews": []
+  ]
 }
